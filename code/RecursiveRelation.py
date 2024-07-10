@@ -8,5 +8,4 @@ def expectedPairs(months, offsprings):
 if __name__ == "__main__":
     with open("../data/rosalind_fib.txt", 'r') as f:
         n, k = f.readline().strip().split(" ")
-        # print(expectedPairs(int(n), int(k)))
-        print(expectedPairs(5, 2))
+        print(expectedPairs(int(n), int(k)))
