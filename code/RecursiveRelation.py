@@ -1,11 +1,12 @@
-def fib(n, k):
-    if n <= 2:
-        return 1
-    else:
-        return fib(n - 1, k) + k * fib(n - 2, k)
 
+def expectedPairs(months, offsprings):
+    adults, pairs = 1, 1
+    for month in range(months - 1):
+        pairs, adults = adults, adults + offsprings * pairs
+    return pairs
 
 if __name__ == "__main__":
     with open("../data/rosalind_fib.txt", 'r') as f:
         n, k = f.readline().strip().split(" ")
-        print(fib(int(n), int(k)))
+        # print(expectedPairs(int(n), int(k)))
+        print(expectedPairs(5, 2))
